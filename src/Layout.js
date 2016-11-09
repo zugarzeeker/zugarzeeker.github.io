@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'legendary-pancake'
+import './Layout.scss'
 
 export default function Layout ({ children }) {
   return (

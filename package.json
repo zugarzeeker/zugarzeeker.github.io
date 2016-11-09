@@ -25,7 +25,10 @@
     "babel-preset-es2016": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.18.0",
-    "legendary-pancake": "^0.3.1"
+    "css-loader": "^0.25.0",
+    "legendary-pancake": "^0.3.1",
+    "node-sass": "^3.11.2",
+    "sass-loader": "^4.0.2"
   },
   "dependencies": {
     "react": "^15.3.2",
