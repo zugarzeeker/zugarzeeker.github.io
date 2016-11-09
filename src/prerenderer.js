@@ -4,7 +4,7 @@ import { createPrerenderer } from 'legendary-pancake/prerenderer'
 import pages from './pages'
 
 export const prerenderer = createPrerenderer(pages, {
-  renderPage (content, renderContext) {
+  renderPage (content, { stylesheets, javascripts }) {
     const contentHtml = ReactDOMServer.renderToString(content)
     return (`
       <!DOCTYPE html>
@@ -14,11 +14,11 @@ export const prerenderer = createPrerenderer(pages, {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>My website</title>
-        ${renderContext.stylesheets}
+        ${stylesheets}
       </head>
       <body>
         <div id="app">${contentHtml}</div>
-        ${renderContext.javascripts}
+        ${javascripts}
       </body>
       </html>
     `)

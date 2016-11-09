@@ -5,15 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "legendary-pancake server",
-    "build": "legendary-pancake build",
-    "clean": "legendary-pancake clean"
+    "build": "legendary-pancake build && ./scripts/generatePublicFolder",
+    "clean": "legendary-pancake clean; rm -rfv public",
+    "gh-pages": "./scripts/deployToGitHubPages"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zugarzeeker/zugarzeeker.com.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Supanut Apikulvanich <supanut.overload@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zugarzeeker/zugarzeeker.com/issues"
   },
@@ -26,9 +27,11 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.18.0",
     "css-loader": "^0.25.0",
+    "gulp-gh-pages": "^0.5.4",
     "legendary-pancake": "^0.3.1",
     "node-sass": "^3.11.2",
-    "sass-loader": "^4.0.2"
+    "sass-loader": "^4.0.2",
+    "vinyl-fs": "^2.4.4"
   },
   "dependencies": {
     "react": "^15.3.2",
