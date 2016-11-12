@@ -15,6 +15,7 @@ export default function Profile ({ children }) {
           <ProfilePicture />
         </div>
       </div>
+      <div className="text-center">Icons from flaticon.com</div>
     </div>
   )
 }

@@ -61,7 +61,7 @@
     .fields {
       padding-left: 30px;
       // TODO : change h4 to className key, value, field
-      h4 {
+      .field {
         font-size: 0.7em;
         font-weight: bold;
       }
@@ -86,4 +86,14 @@
     font-size: 0.7em;
   }
   background-color: #eeeeee;
+}
+
+.icon-contact {
+  width: 2em;
+  margin-right: 0.4em;
+}
+
+.disable {
+  opacity: 0.2;
+  pointer-events: none;
 }
