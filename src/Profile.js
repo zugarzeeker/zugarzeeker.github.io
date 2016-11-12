@@ -10,6 +10,9 @@ export default function Profile ({ children }) {
       <div className="container">
         <div className="row row-fluid row-eq-height">
           <div className="col-md-6 col-sm-6 information">
+            <div className="filename">
+              {'// about-me.json'}
+            </div>
             <div className="json">
               <div className="fields">
                 <h4>Name: Supanut Apikulvanich</h4>
