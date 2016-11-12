@@ -1,4 +1,5 @@
 #!/usr/bin/env node
 'use strict'
 
-require('vinyl-fs').src('public/**/*').pipe(require('gulp-gh-pages')()).on('data', () => { })
+// require('vinyl-fs').src('public/**/*').pipe(require('gulp-gh-pages')()).on('data', () => { })
+require('vinyl-fs').src('public/**/*').pipe(require('gulp-gh-pages')({ branch: 'master' })).on('data', () => { })
