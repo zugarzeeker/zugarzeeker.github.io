@@ -1,5 +1,5 @@
 {
-  "name": "zugarzeeker.com",
+  "name": "zugarzeeker.github.io",
   "version": "0.1.0",
   "description": "My website that has information, activity and portfolio about me.",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zugarzeeker/zugarzeeker.com.git"
+    "url": "git+https://github.com/zugarzeeker/zugarzeeker.github.io.git"
   },
   "author": "Supanut Apikulvanich <supanut.overload@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zugarzeeker/zugarzeeker.com/issues"
+    "url": "https://github.com/zugarzeeker/zugarzeeker.github.io/issues"
   },
-  "homepage": "https://github.com/zugarzeeker/zugarzeeker.com#readme",
+  "homepage": "https://github.com/zugarzeeker/zugarzeeker.github.io#readme",
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
