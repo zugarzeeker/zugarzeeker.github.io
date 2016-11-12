@@ -40,6 +40,13 @@
   padding: 0 !important;
 }
 
+@media screen and (min-width: 768px) {
+  .icon-contact {
+    width: 1.55em !important;
+    margin-right: 0.1em;
+  }
+}
+
 .information {
   @media screen and (min-width: 992px) {
     & {
@@ -78,22 +85,32 @@
     }
   }
   .filename {
-    width: 100%;
-    height: 100%;
     position: absolute;
     padding-left: 10px;
     padding-top: 0.4em;
     font-size: 0.7em;
+    color: grey;
   }
   background-color: #eeeeee;
 }
 
 .icon-contact {
-  width: 2em;
-  margin-right: 0.4em;
+  width: 2.5em;
+  margin-right: 0.1em;
 }
 
 .disable {
   opacity: 0.2;
   pointer-events: none;
+}
+
+.keyname {
+  .start, .end {
+    color: #3923D6;
+    // color: #01F33E;
+    // color: #01F33E;
+  }
+  .content {
+    color: #1FCB4A;
+  }
 }

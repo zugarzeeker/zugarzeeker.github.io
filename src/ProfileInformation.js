@@ -2,16 +2,18 @@ import React from 'react'
 import JsonField from './JsonField'
 import _ from 'lodash'
 import cn from 'classnames'
+import CodeBlock from './CodeBlock'
 
 const data = [
   { Name: 'Supanut Apikulvanich' },
   { Nickname: 'Nut' },
   { Codename: 'ZugarZeeker' },
   { Job: 'Fullstack-Developer' },
-  { Studies: 'Computer Engineer, Kasetsart University' },
+  // { Studies: 'Computer Engineer, Kasetsart University' },
+  { Studies: 'Computer Engineer, KU' },
   { Past: 'Satit Ayutthaya' },
   { Now: 'Intern @runnables.co.th' },
-  { Hobbies: ['Tennis', 'Thai Checker', 'Manga', 'Music'] },
+  { Hobbies: ['Tennis', 'Thai Checker', 'Manga', 'Music'].join(', ') },
 ]
 
 const contacts = [
@@ -23,31 +25,44 @@ const contacts = [
   { path: 'twitter', link: '', disable: true  },
 ]
 
+const contactLinks = (
+  <CodeBlock start="[" end="]" className="array">
+  {
+    _.map(contacts, ({ path, link, disable }, index) => (
+      <span>
+        <a href={link} className={cn({ disable })}>
+          <img className={cn('icon-contact')}
+            src={require(`./icons/${path}.svg`)}
+          />
+        </a>
+        {index !== contacts.length - 1 && <span className="comma">{','}</span>}
+      </span>
+    ))
+  }
+  </CodeBlock>
+)
+
+const renderJson = () => (
+  <div className="json">
+    <div className="fields">
+      {
+        _.map(data, (field) => {
+          const keyname = _.keys(field)[0]
+          const value = field[keyname]
+          return <JsonField keyname={keyname} value={value} isEnd={false} />
+        })
+      }
+      <JsonField keyname={'FindMe'} value={contactLinks} isEnd={true} />
+    </div>
+  </div>
+)
+
 const ProfileInformation = () => (
   <div className="col-md-6 col-sm-6 information">
     <div className="filename">
       {'// about-me.json'}
     </div>
-    <div className="json">
-      <div className="fields">
-        {
-          _.map(data, (field) => (
-            <JsonField field={field} />
-          ))
-        }
-        <div className="field">{'"FindMe": '}
-          {
-            _.map(contacts, ({ path, link, disable }) => (
-              <a href={link} className={cn({ disable })}>
-                <img className={cn('icon-contact')}
-                  src={require(`./icons/${path}.svg`)}
-                />
-              </a>
-            ))
-          }
-        </div>
-      </div>
-    </div>
+    {renderJson()}
   </div>
 )
 
