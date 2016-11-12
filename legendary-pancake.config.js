@@ -17,6 +17,18 @@ exports.configureWebpack = (config, pancake) => {
     {
       test: /\.scss/,
       loader: pancake.css('css-loader!sass-loader')
+    },
+    {
+      test: /\.jpg$/,
+      loader: 'file-loader'
+    },
+    {
+      test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      loader: 'file-loader'
+    },
+    {
+      test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      loader: 'file-loader'
     }
   )
   return config

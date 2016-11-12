@@ -1,0 +1,62 @@
+:global {
+  body {
+    background-color: #3e3e3e !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .layout {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    width: 100%;
+    margin: 0;
+    transform: translate(-50%,-50%);
+  }
+  .row {
+    display: table;
+    .picture, .information {
+      display: table-cell;
+      float: none;
+    }
+    .picuture {
+      float: left;
+    }
+    .json {
+      position: absolute;
+    }
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .picture, .information {
+    margin: 0 auto;
+    max-width: 420px;
+  }
+}
+
+.picture, .information {
+  padding: 0 !important;
+}
+
+.information {
+  .json {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    padding-left: 10px;
+    .fields {
+      padding-left: 30px;
+    }
+    &::before {
+      content: '{';
+    }
+    &::after {
+      content: '}';
+    }
+    &::before, &::after {
+      font-weight: bold;
+    }
+  }
+  background-color: #eeeeee;
+}

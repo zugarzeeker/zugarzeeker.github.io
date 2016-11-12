@@ -1,17 +1,11 @@
 import React from 'react'
-import Layout from './Layout'
+import Profile from './Profile'
 
 export default {
   '/': (callback) => {
-    callback(<Layout>Home page</Layout>)
-  },
-  '/about/': (callback) => {
-    callback(<Layout>About</Layout>)
-  },
-  '/contact/': (callback) => {
-    callback(<Layout>Contact</Layout>)
+    callback(<Profile />)
   },
   '/no-match/': (callback) => {
-    callback(<Layout>404</Layout>)
+    callback(<h1>404</h1>)
   }
 }
