@@ -14,6 +14,7 @@ export default function Profile ({ children }) {
               <div className="fields">
                 <h4>Name: Supanut Apikulvanich</h4>
                 <h4>Nickname: Nut</h4>
+                <h4>Codename: ZugarZeeker</h4>
                 <h4>Job: Fullstack-Developer</h4>
                 <h4>Studies: Computer Engineer, Kasetsart University</h4>
                 <h4>Past: Satit Ayutthaya</h4>
