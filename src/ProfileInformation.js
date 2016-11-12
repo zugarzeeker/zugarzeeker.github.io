@@ -13,7 +13,6 @@ const data = [
   { Studies: 'Computer Engineer, KU' },
   { Past: 'Satit Ayutthaya' },
   { Now: 'Intern @runnables.co.th' },
-  { Hobbies: ['Tennis', 'Thai Checker', 'Manga', 'Music'].join(', ') },
 ]
 
 const contacts = [
@@ -42,6 +41,20 @@ const contactLinks = (
   </CodeBlock>
 )
 
+const hobbies = ['Tennis', 'Thai Checker', 'Manga', 'Music']
+const hobbyComponents = (
+  <CodeBlock start='[' end=']' className="array">
+    <div className="hobbies">
+      <CodeBlock start='"' end='"'>{'Tennis'}</CodeBlock>{', '}
+      <CodeBlock start='"' end='"'>{'Thai Checker'}</CodeBlock>{', '}
+      <CodeBlock start='"' end='"'>{'Manga'}</CodeBlock>{', '}
+      <CodeBlock start='"' end='"'>{'Music'}</CodeBlock>{', '}
+      <CodeBlock start='"' end='"'>{'Book'}</CodeBlock>
+    </div>
+  </CodeBlock>
+)
+
+
 const renderJson = () => (
   <div className="json">
     <div className="fields">
@@ -52,6 +65,7 @@ const renderJson = () => (
           return <JsonField keyname={keyname} value={value} isEnd={false} />
         })
       }
+      <JsonField keyname={'Hobbies'} value={hobbyComponents} isEnd={false} />
       <JsonField keyname={'FindMe'} value={contactLinks} isEnd={true} />
     </div>
   </div>
