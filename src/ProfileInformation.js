@@ -12,7 +12,7 @@ const data = [
   // { Studies: 'Computer Engineer, Kasetsart University' },
   { Studies: 'Computer Engineer, KU' },
   { Past: 'Satit Ayutthaya' },
-  { Now: 'Intern @runnables.co.th' },
+  { Now: 'Backend developer @taskworld.com' },
 ]
 
 const contacts = [
