@@ -11,8 +11,8 @@ const data = [
   { Job: 'Fullstack-Developer' },
   // { Studies: 'Computer Engineer, Kasetsart University' },
   { Studies: 'Computer Engineer, KU' },
-  { Past: 'Satit Ayutthaya' },
-  { Now: 'Software Engineer @taskworld.com' }
+  // { Past: 'Satit Ayutthaya' },
+  // { 'Interests': 'Value Investment & LEAN & KAIZEN' }
 ]
 
 const contacts = [
@@ -54,10 +54,20 @@ const hobbyComponents = (
   </CodeBlock>
 )
 
+const interestComponents = (
+  <CodeBlock start='[' end=']' className="array">
+    <div className="hobbies">
+      <CodeBlock start='"' end='"'>{'Technology'}</CodeBlock>{', '}
+      <CodeBlock start='"' end='"'>{'Value Investment'}</CodeBlock>{', '}
+      <CodeBlock start='"' end='"'>{'LEAN'}</CodeBlock>{', '}
+      <CodeBlock start='"' end='"'>{'KAIZEN'}</CodeBlock>
+    </div>
+  </CodeBlock>
+)
 
 const renderJson = () => (
   <div className="json">
-    <div className="fields">
+    <div className="fields indent">
       {
         _.map(data, (field) => {
           const keyname = _.keys(field)[0]
@@ -65,6 +75,22 @@ const renderJson = () => (
           return <JsonField keyname={keyname} value={value} isEnd={false} />
         })
       }
+      {
+        <JsonField
+          keyname={'Now'}
+          value={(
+            <CodeBlock start="{" end="}">
+              <div className="indent">
+                <JsonField keyname={'Position'} value={'Software Engineer'} isEnd={false} />
+                <JsonField keyname={'At'} value={'Taskworld'} isEnd={false} />
+              </div>
+            </CodeBlock>
+          )}
+          isEnd={false}
+        />
+      }
+
+      <JsonField keyname={'Interests'} value={interestComponents} isEnd={false} />
       <JsonField keyname={'Hobbies'} value={hobbyComponents} isEnd={false} />
       <JsonField keyname={'FindMe'} value={contactLinks} isEnd={true} />
     </div>
