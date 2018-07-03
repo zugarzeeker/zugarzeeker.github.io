@@ -12,32 +12,32 @@ const data = [
   // { Studies: 'Computer Engineer, Kasetsart University' },
   { Studies: 'Computer Engineer, KU' },
   { Past: 'Satit Ayutthaya' },
-  { Now: 'Backend developer @taskworld.com' },
+  { Now: 'Software Engineer @taskworld.com' }
 ]
 
 const contacts = [
   { path: 'facebook', link: 'https://www.facebook.com/supanut.apikulvanich' },
   { path: 'github', link: 'https://www.github.com/zugarzeeker' },
-  { path: 'medium', link: 'https://www.medium.com/@zugarzeeker'},
-  { path: 'gmail', link: '', disable: true  },
-  { path: 'line', link: '', disable: true  },
-  { path: 'twitter', link: '', disable: true  },
+  { path: 'medium', link: 'https://www.medium.com/@zugarzeeker' },
+  { path: 'gmail', link: '', disable: true },
+  { path: 'line', link: '', disable: true },
+  { path: 'twitter', link: '', disable: true }
 ]
 
 const contactLinks = (
   <CodeBlock start="[" end="]" className="array">
-  {
-    _.map(contacts, ({ path, link, disable }, index) => (
-      <span>
-        <a href={link} className={cn({ disable })}>
-          <img className={cn('icon-contact')}
-            src={require(`./icons/${path}.svg`)}
-          />
-        </a>
-        {index !== contacts.length - 1 && <span className="comma">{','}</span>}
-      </span>
-    ))
-  }
+    {
+      _.map(contacts, ({ path, link, disable }, index) => (
+        <span>
+          <a href={link} className={cn({ disable })}>
+            <img className={cn('icon-contact')}
+              src={require(`./icons/${path}.svg`)}
+            />
+          </a>
+          {index !== contacts.length - 1 && <span className="comma">{','}</span>}
+        </span>
+      ))
+    }
   </CodeBlock>
 )
 
