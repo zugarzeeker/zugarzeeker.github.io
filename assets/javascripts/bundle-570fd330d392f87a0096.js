@@ -10897,7 +10897,7 @@
           { Name: 'Supanut Apikulvanich' },
           { Nickname: 'Nut' },
           { Codename: 'ZugarZeeker' },
-          { Job: 'Fullstack-Developer' },
+          // { Job: 'Fullstack-Developer' },
           { Education: 'Computer Engineer, KU' },
           { Now: 'Software Engineer @cleverse.com' },
         ],
