@@ -10898,8 +10898,7 @@
           { Nickname: 'Nut' },
           { Codename: 'ZugarZeeker' },
           { Job: 'Fullstack-Developer' },
-          { Studies: 'Computer Engineer, KU' },
-          { Past: 'Satit Ayutthaya' },
+          { Grad: 'Computer Engineer, KU' },
           { Now: 'Software Engineer @cleverse.com' },
         ],
         v = [
