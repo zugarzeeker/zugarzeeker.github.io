@@ -10904,7 +10904,7 @@
         v = [
           { path: 'facebook', link: 'http://bit.ly/fbsupanut' },
           { path: 'github', link: 'http://bit.ly/ghsupanut' },
-          { path: 'medium', link: 'https://www.medium.com/@zugarzeeker' },
+          { path: 'medium', link: 'http://bit.ly/mdsupanut' },
           { path: 'gmail', link: '', disable: !0 },
           { path: 'line', link: '', disable: !0 },
           { path: 'twitter', link: '', disable: !0 },
