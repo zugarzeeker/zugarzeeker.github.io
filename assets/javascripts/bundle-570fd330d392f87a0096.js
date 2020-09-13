@@ -3554,7 +3554,7 @@
       e.exports = n;
     },
     function (e, t, n) {
-      'use strict'
+      'use strict';
       /**
        * Checks if an event is supported in the current execution environment.
        *
@@ -3568,7 +3568,7 @@
        * @return {boolean} True if the event is supported.
        * @internal
        * @license Modernizr 3.0.0pre (Custom Build) | MIT
-       */;
+       */
       function r(e, t) {
         if (!i.canUseDOM || (t && !('addEventListener' in document))) return !1;
         var n = 'on' + e,
@@ -10898,7 +10898,7 @@
           { Nickname: 'Nut' },
           { Codename: 'ZugarZeeker' },
           { Job: 'Fullstack-Developer' },
-          { Grad: 'Computer Engineer, KU' },
+          { Education: 'Computer Engineer, KU' },
           { Now: 'Software Engineer @cleverse.com' },
         ],
         v = [
