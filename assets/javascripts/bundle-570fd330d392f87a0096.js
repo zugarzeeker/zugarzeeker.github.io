@@ -10902,8 +10902,8 @@
           { Now: 'Software Engineer @cleverse.com' },
         ],
         v = [
-          { path: 'facebook', link: 'https://www.facebook.com/supanut.apikulvanich' },
-          { path: 'github', link: 'https://www.github.com/zugarzeeker' },
+          { path: 'facebook', link: 'http://bit.ly/fbsupanut' },
+          { path: 'github', link: 'http://bit.ly/ghsupanut' },
           { path: 'medium', link: 'https://www.medium.com/@zugarzeeker' },
           { path: 'gmail', link: '', disable: !0 },
           { path: 'line', link: '', disable: !0 },
