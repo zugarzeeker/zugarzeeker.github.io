@@ -10899,7 +10899,7 @@
           { Codename: 'ZugarZeeker' },
           // { Job: 'Fullstack-Developer' },
           { Education: 'Computer Engineer, KU' },
-          { Now: 'Software Engineer @cleverse.com' },
+          { Now: 'Backend Engineer @amity.com' },
         ],
         v = [
           { path: 'facebook', link: 'http://bit.ly/fbsupanut' },
